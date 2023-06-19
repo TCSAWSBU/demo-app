@@ -22,7 +22,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload source code zip to S3
-        run: aws s3 cp source-code.zip s3://myapp-source-code-9988
+        run: aws s3 cp source-code.zip s3://myapp-source-code-99889
 
       - name: Deploy to AWS CodeDeploy
         run: |
