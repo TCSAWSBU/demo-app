@@ -1,0 +1,27 @@
+version: 0.0
+os: linux 
+files:
+  - source: /
+    destination: /home/ubuntu/myapp
+permissions:
+  - object: /home/ubuntu/myapp
+    owner: root
+    group: root
+    mode: 755
+hooks:
+  ApplicationStop:
+    - location: deploy/app_stop.sh 
+      timeout: 120
+      runas: root
+  BeforeInstall:
+    - location: deploy/before_install.sh
+      timeout: 120
+      runas: root
+  AfterInstall:
+    - location: deploy/after_install.sh     
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deploy/app_start.sh  
+      timeout: 120
+      runas: root
