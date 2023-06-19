@@ -29,4 +29,4 @@ jobs:
           aws deploy create-deployment \
             --application-name myapp \
             --deployment-group-name prod \
-            --s3-location bucket=myapp-source-code-9988,key=source-code.zip,bundleType=zip
+            --s3-location bucket=myapp-source-code-99889,key=source-code.zip,bundleType=zip
