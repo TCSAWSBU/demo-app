@@ -5,7 +5,7 @@ const app = express();
 const port = 4000;
 
 app.get('/health', (req, res) => {
-  res.status(200).json('blue')
+  res.status(200).json('Halo from Demo Application')
 });
 
 // // Create a connection pool to the PostgreSQL database
